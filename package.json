@@ -1,6 +1,6 @@
 {
   "name": "http-errors-wrapper",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Handle http errors in an easy way",
   "main": "index.js",
   "scripts": {
