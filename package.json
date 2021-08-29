@@ -1,6 +1,6 @@
 {
   "name": "http-errors-wrapper",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Handle http errors in an easy way",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,8 @@
     "nodejs",
     "http",
     "error",
-    "http-errors"
+    "http-errors",
+    "wrapper"
   ],
   "author": "luisfuentech",
   "license": "MIT",

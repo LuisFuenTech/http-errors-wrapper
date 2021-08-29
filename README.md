@@ -1,6 +1,6 @@
-# Http Error Wrapper
+# HTTP Errors Wrapper
 
-This module allows you to create an object to throw custom and specific http-errors when handling server responses in your nodejs APIs.
+This module allows you to throw custom and specific http-errors when handling server responses in your NodeJS APIs.
 
 # Compatibility
 
