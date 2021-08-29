@@ -34,7 +34,7 @@ const HttpErrors = require('http-errors-wrapper');
 const HttpErrors = require('http-errors-wrapper');
 
 try {
-    HttpErrors.notFoundError('User not found');
+    throw new HttpErrors.notFoundError('User not found');
 }
 catch(error) {
     if(error.isHttpError){
