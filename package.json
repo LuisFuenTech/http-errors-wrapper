@@ -1,0 +1,25 @@
+{
+  "name": "simple-http-error",
+  "version": "1.0.0",
+  "description": "Handle http errors in an easy way",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "javascript",
+    "nodejs",
+    "http",
+    "error",
+    "http-errors"
+  ],
+  "author": "luisfuentech",
+  "license": "MIT",
+  "dependencies": {
+    "jest": "23.6.0",
+    "sinon": "7.0.0"
+  },
+  "devDependencies": {
+    "handlebars": "4.5.0"
+  }
+}
