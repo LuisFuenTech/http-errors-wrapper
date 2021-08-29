@@ -2,6 +2,16 @@
 
 This module allows you to throw custom and specific http-errors when handling server responses in your NodeJS APIs.
 
+<a href="https://nodei.co/npm/http-errors-wrapper">
+  <img src="https://nodei.co/npm/http-errors-wrapper.png?downloads=true">
+</a>
+
+[![npm version](https://img.shields.io/npm/v/http-errors-wrapper.svg?style=flat-square)](https://badge.fury.io/js/http-errors-wrapper)
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/LuisFuenTech/http-errors-wrapper/blob/master/LICENSE)
+[![NodeJS](https://img.shields.io/badge/node-8.x.x-brightgreen?style=flat-square)](https://github.com/LuisFuenTech/http-errors-wrapper/blob/master/package.json)
+[![install size](https://packagephobia.now.sh/badge?p=http-errors-wrapper)](https://packagephobia.now.sh/result?p=http-errors-wrapper)
+<!-- [![npm downloads](https://img.shields.io/npm/dm/http-errors-wrapper.svg?style=flat-square)](http://npm-stat.com/charts.html?package=http-errors-wrapper) -->
+
 # Compatibility
 
 The minimum supported version of Node.js is v8.
@@ -10,27 +20,27 @@ The minimum supported version of Node.js is v8.
 
 ## Installation
 
-```
-npm i http-errors-wrapper
+```bash
+$ npm i http-errors-wrapper
 ```
 
 ## Test
 
 Run from the root folder:
 
-```
-npm run test
+```bash
+$ npm run test
 ```
 
 ## Importing
 
-```
+```js
 const HttpErrors = require('http-errors-wrapper');
 ```
 
 ## Example
 
-```
+```js
 const HttpErrors = require('http-errors-wrapper');
 
 try {
