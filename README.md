@@ -1,4 +1,4 @@
-# Http Error Handler
+# Http Error Wrapper
 
 This module allows you to create an object to throw custom and specific http-errors when handling server responses in your nodejs APIs.
 
@@ -11,7 +11,7 @@ The minimum supported version of Node.js is v8.
 ## Installation
 
 ```
-npm i simple-http-error
+npm i http-errors-wrapper
 ```
 
 ## Test
@@ -25,13 +25,13 @@ npm run test
 ## Importing
 
 ```
-const HttpErrors = require('simple-http-error');
+const HttpErrors = require('http-errors-wrapper');
 ```
 
 ## Example
 
 ```
-const HttpErrors = require('simple-http-error');
+const HttpErrors = require('http-errors-wrapper');
 
 try {
     HttpErrors.notFoundError('User not found');
@@ -70,4 +70,4 @@ Each http error from this module has:
 
 # License
 
-[MIT](https://github.com/LuisFuenTech/simple-http-error/blob/master/LICENSE)
+[MIT](https://github.com/LuisFuenTech/http-errors-wrapper/blob/master/LICENSE)
