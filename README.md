@@ -11,11 +11,13 @@ The minimum supported version of Node.js is v8.
 ## Installation
 
 ```
-npm i http-error-handler
+npm i simple-http-error
 ```
 
 ## Test
+
 Run from the root folder:
+
 ```
 npm run test
 ```
@@ -23,17 +25,16 @@ npm run test
 ## Importing
 
 ```
-const HttpError = require('http-error-handler');
+const HttpErrors = require('simple-http-error');
 ```
 
 ## Example
 
 ```
-const HttpError = require('/path/to/module');
-const httpError = new HttpError();
+const HttpErrors = require('simple-http-error');
 
 try {
-    httpError.notFound('User not found');
+    HttpErrors.notFoundError('User not found');
 }
 catch(error) {
     if(error.isHttpError){
@@ -57,13 +58,16 @@ Each http error from this module has:
 
 ## Methods
 
-- `badRequest`: Handles 400 http error
-- `unauthorized`: Handles 401 http error
-- `forbidden`: Handles 403 http error
-- `notFound`: Handles 404 http error
-- `conflict`: Handles 409 http error
+- `badRequestError`: Handles 400 http error
+- `unauthorizedError`: Handles 401 http error
+- `forbiddenError`: Handles 403 http error
+- `notFoundError`: Handles 404 http error
+- `methodNotAllowedErrorError`: Handles 405 http error
+- `conflictError`: Handles 409 http error
+- `unsupportedMediaTypeError`: Handles 415 http error
 - `internalServerError`: Handles 500 http error
+- `badGatewayError`: Handles 502 http error
 
 # License
 
-[MIT](https://github.com/LuisFuenTech/http-error-handler/blob/master/LICENSE)
+[MIT](https://github.com/LuisFuenTech/simple-http-error/blob/master/LICENSE)
