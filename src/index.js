@@ -1,5 +1,5 @@
 const helper = require("./helper");
-const errors = require("./errors.json");
+const errors = require("./errors.js");
 const httpErrors = {};
 
 const errorBuilder = (options) => {

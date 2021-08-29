@@ -2,7 +2,7 @@ const { stub } = require("sinon");
 
 const httpErrorsInstances = require("../src");
 const helper = require("../src/helper");
-const errors = require("../src/errors.json");
+const errors = require("../src/errors.js");
 const httpErrors = {};
 
 describe("HTTP Errors", () => {
@@ -38,17 +38,37 @@ describe("HTTP Errors", () => {
     }
   });
 
-  it("Should create every error with message passed", () => {
+  describe("Error instances default", () => {
     for (const [alias] of Object.entries(httpErrors)) {
-      try {
-        getFullDateStub.returns(dateExpected);
-        throw new httpErrorsInstances[alias]("Custom error message");
-      } catch (error) {
-        expect(error.date.length).toEqual(19);
-        expect(error.date).toEqual(dateExpected);
-        expect(error.message).toEqual("Custom error message");
-        expect(error.statusCode).toEqual(expect.any(Number));
-      }
+      it(`Should create ${alias} with message passed`, () => {
+        try {
+          getFullDateStub.returns(dateExpected);
+          throw new httpErrorsInstances[alias]("Custom error message");
+        } catch (error) {
+          expect(error.date.length).toEqual(19);
+          expect(error.date).toEqual(dateExpected);
+          expect(error.message).toEqual("Custom error message");
+          expect(error.statusCode).toEqual(expect.any(Number));
+          expect(error.isHttpError).toEqual(true);
+        }
+      });
+    }
+  });
+
+  describe("Error instances with message", () => {
+    for (const [alias] of Object.entries(httpErrors)) {
+      it(`Should create ${alias}`, () => {
+        try {
+          getFullDateStub.returns(dateExpected);
+          throw new httpErrorsInstances[alias]("Custom error message");
+        } catch (error) {
+          expect(error.date.length).toEqual(19);
+          expect(error.date).toEqual(dateExpected);
+          expect(error.message).toEqual("Custom error message");
+          expect(error.statusCode).toEqual(expect.any(Number));
+          expect(error.isHttpError).toEqual(true);
+        }
+      });
     }
   });
 });

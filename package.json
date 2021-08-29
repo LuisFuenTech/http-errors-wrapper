@@ -1,11 +1,17 @@
 {
   "name": "http-errors-wrapper",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Handle http errors in an easy way",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "./node_modules/.bin/babel src -d lib --no-copy-ignored"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuisFuenTech/http-errors-wrapper"
+  },
+  "bugs": "https://github.com/LuisFuenTech/http-errors-wrapper/issues",
   "keywords": [
     "javascript",
     "nodejs",
@@ -14,13 +20,16 @@
     "http-errors",
     "wrapper"
   ],
-  "author": "luisfuentech",
+  "homepage": "https://github.com/LuisFuenTech/http-errors-wrapper#readme",
+  "author": "Luis Fuentes <luisfuentech> <luisfuentes.au@gmail.com> (https://github.com/LuisFuenTech)",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
+    "@babel/cli": "7.14.8",
+    "@babel/core": "7.15.0",
+    "@babel/preset-env": "7.15.0",
+    "handlebars": "4.5.0",
     "jest": "23.6.0",
     "sinon": "7.0.0"
   },
-  "devDependencies": {
-    "handlebars": "4.5.0"
-  }
+  "dependencies": {}
 }

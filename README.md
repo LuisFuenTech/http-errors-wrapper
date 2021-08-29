@@ -67,6 +67,7 @@ Each http error from this module has:
 - `unsupportedMediaTypeError`: Handles 415 http error
 - `internalServerError`: Handles 500 http error
 - `badGatewayError`: Handles 502 http error
+- (`The rest will be added on demand`)
 
 # License
 
