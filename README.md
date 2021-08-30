@@ -70,7 +70,7 @@ Each http error from this module has:
 - `unauthorizedError`: Handles 401 http error
 - `forbiddenError`: Handles 403 http error
 - `notFoundError`: Handles 404 http error
-- `methodNotAllowedErrorError`: Handles 405 http error
+- `methodNotAllowedError`: Handles 405 http error
 - `conflictError`: Handles 409 http error
 - `unsupportedMediaTypeError`: Handles 415 http error
 - `internalServerError`: Handles 500 http error
