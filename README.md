@@ -14,7 +14,7 @@ This module allows you to throw custom and specific http-errors when handling se
 
 # Compatibility
 
-The minimum supported version of Node.js is v8.
+The minimum supported version of Node.js is v6.
 
 # Usage
 

@@ -1,16 +1,17 @@
 const { stub } = require("sinon");
-
 const httpErrorsInstances = require("../src");
-const helper = require("../src/helper");
+const utils = require("../src/utils");
 const errors = require("../src/errors.js");
 const httpErrors = {};
+
+utils.polyfill["Object"]["entries"]();
 
 describe("HTTP Errors", () => {
   const dateExpected = "2021-08-28 21:15:50";
   let getFullDateStub;
 
   beforeEach(() => {
-    getFullDateStub = stub(helper, "getFullDate");
+    getFullDateStub = stub(utils, "getFullDate");
   });
 
   afterEach(() => {

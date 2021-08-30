@@ -1,4 +1,4 @@
-const helper = require("./helper");
+const helper = require("./utils");
 const errors = require("./errors.js");
 const httpErrors = {};
 
@@ -7,6 +7,7 @@ const errorBuilder = (options) => {
     constructor(message = "") {
       super();
 
+      /* istanbul ignore else */
       if (Error.captureStackTrace) {
         Error.captureStackTrace(this, HttpError);
       }
