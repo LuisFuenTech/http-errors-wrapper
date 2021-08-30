@@ -8,7 +8,7 @@ This module allows you to throw custom and specific http-errors when handling se
 
 [![npm version](https://img.shields.io/npm/v/http-errors-wrapper.svg?style=flat-square)](https://badge.fury.io/js/http-errors-wrapper)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/LuisFuenTech/http-errors-wrapper/blob/master/LICENSE)
-[![NodeJS](https://img.shields.io/badge/node-8.x.x-brightgreen?style=flat-square)](https://github.com/LuisFuenTech/http-errors-wrapper/blob/master/package.json)
+[![NodeJS](https://img.shields.io/badge/node-6.x.x-brightgreen?style=flat-square)](https://github.com/LuisFuenTech/http-errors-wrapper/blob/master/package.json)
 [![install size](https://packagephobia.now.sh/badge?p=http-errors-wrapper)](https://packagephobia.now.sh/result?p=http-errors-wrapper)
 [![npm downloads](https://img.shields.io/npm/dm/http-errors-wrapper.svg?style=flat-square)](http://npm-stat.com/charts.html?package=http-errors-wrapper)
 
