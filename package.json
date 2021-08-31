@@ -21,7 +21,7 @@
     "wrapper"
   ],
   "homepage": "https://github.com/LuisFuenTech/http-errors-wrapper#readme",
-  "author": "Luis Fuentes <luisfuentech> <luisfuentes.au@gmail.com> (https://github.com/LuisFuenTech)",
+  "author": "Luis Fuentes <luisfuentes.au@gmail.com> (https://github.com/LuisFuenTech)",
   "license": "MIT",
   "devDependencies": {
     "@babel/cli": "7.14.8",
@@ -31,5 +31,8 @@
     "jest": "23.6.0",
     "sinon": "7.0.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "engines": {
+    "node": ">=6"
+  }
 }
