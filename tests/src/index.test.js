@@ -1,7 +1,7 @@
 const { stub } = require("sinon");
-const httpErrorsInstances = require("../src");
-const utils = require("../src/utils");
-const errors = require("../src/errors.js");
+const httpErrorsInstances = require("../../src");
+const utils = require("../../src/utils");
+const errors = require("../../src/errors.js");
 const httpErrors = {};
 
 utils.polyfill["Object"]["entries"]();

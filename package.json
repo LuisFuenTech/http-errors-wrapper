@@ -30,9 +30,5 @@
     "handlebars": "4.5.0",
     "jest": "23.6.0",
     "sinon": "7.0.0"
-  },
-  "dependencies": {},
-  "engines": {
-    "node": ">=6"
   }
 }
