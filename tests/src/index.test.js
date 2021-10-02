@@ -1,17 +1,15 @@
-const { stub } = require("sinon");
-const httpErrorsInstances = require("../../src");
-const utils = require("../../src/utils");
-const errors = require("../../src/errors.js");
+const { stub } = require('sinon');
+const httpErrorsInstances = require('../../src');
+const utils = require('../../src/utils');
+const errors = require('../../src/errors.js');
 const httpErrors = {};
 
-utils.polyfill["Object"]["entries"]();
-
-describe("HTTP Errors", () => {
-  const dateExpected = "2021-08-28 21:15:50";
+describe('HTTP Errors', () => {
+  const dateExpected = '2021-08-28 21:15:50';
   let getFullDateStub;
 
   beforeEach(() => {
-    getFullDateStub = stub(utils, "getFullDate");
+    getFullDateStub = stub(utils, 'getFullDate');
   });
 
   afterEach(() => {
@@ -22,7 +20,7 @@ describe("HTTP Errors", () => {
     httpErrors[error.alias] = error;
   });
 
-  it("Should create every http error defined", () => {
+  it('Should create every http error defined', () => {
     for (const [alias, errorInstance] of Object.entries(httpErrorsInstances)) {
       try {
         getFullDateStub.returns(dateExpected);
@@ -39,16 +37,16 @@ describe("HTTP Errors", () => {
     }
   });
 
-  describe("Error instances default", () => {
+  describe('Error instances default', () => {
     for (const [alias] of Object.entries(httpErrors)) {
       it(`Should create ${alias} with message passed`, () => {
         try {
           getFullDateStub.returns(dateExpected);
-          throw new httpErrorsInstances[alias]("Custom error message");
+          throw new httpErrorsInstances[alias]('Custom error message');
         } catch (error) {
           expect(error.date.length).toEqual(19);
           expect(error.date).toEqual(dateExpected);
-          expect(error.message).toEqual("Custom error message");
+          expect(error.message).toEqual('Custom error message');
           expect(error.statusCode).toEqual(expect.any(Number));
           expect(error.isHttpError).toEqual(true);
         }
@@ -56,16 +54,16 @@ describe("HTTP Errors", () => {
     }
   });
 
-  describe("Error instances with message", () => {
+  describe('Error instances with message', () => {
     for (const [alias] of Object.entries(httpErrors)) {
       it(`Should create ${alias}`, () => {
         try {
           getFullDateStub.returns(dateExpected);
-          throw new httpErrorsInstances[alias]("Custom error message");
+          throw new httpErrorsInstances[alias]('Custom error message');
         } catch (error) {
           expect(error.date.length).toEqual(19);
           expect(error.date).toEqual(dateExpected);
-          expect(error.message).toEqual("Custom error message");
+          expect(error.message).toEqual('Custom error message');
           expect(error.statusCode).toEqual(expect.any(Number));
           expect(error.isHttpError).toEqual(true);
         }

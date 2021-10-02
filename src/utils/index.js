@@ -1,23 +1,5 @@
-const polyfill = {
-  Object: {
-    entries: () => {
-      if (!Object.entries) {
-        Object.entries = function (obj) {
-          var ownProps = Object.keys(obj),
-            i = ownProps.length,
-            resArray = new Array(i); // preallocate the Array
-          while (i--) resArray[i] = [ownProps[i], obj[ownProps[i]]];
-
-          return resArray;
-        };
-      }
-    }
-  }
-};
-
 const getFullDate = () => {
-  const padZero = (number) =>
-    number >= 0 && number < 10 ? "0" + number : number;
+  const padZero = (number) => (number >= 0 && number < 10 ? `0${number}` : number);
 
   const date = new Date();
   const numberMonth = date.getMonth() + 1;
@@ -36,4 +18,4 @@ const getFullDate = () => {
   return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
 };
 
-module.exports = { polyfill, getFullDate };
+module.exports = { getFullDate };
