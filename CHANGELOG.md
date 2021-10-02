@@ -1,3 +1,11 @@
+## 2.1.1
+
+- Added http error 408, 501 and 503
+
+## 2.0.1
+
+- Fixed error when src was not found
+
 ## 2.0.0
 
 - Set nodejs v10 as minimum version
