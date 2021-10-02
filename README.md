@@ -77,6 +77,9 @@ Each http error from this module has:
 - `badGatewayError`: Handles 502 http error
 - (`The rest will be added on demand`)
 
+# Contributing
+If you want to add something or fix it, please follow [this guide](https://github.com/LuisFuenTech/http-errors-wrapper/blob/master/CONTRIBUTING.md)
+
 # License
 
 [MIT](https://github.com/LuisFuenTech/http-errors-wrapper/blob/master/LICENSE)
