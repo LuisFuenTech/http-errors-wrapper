@@ -30,6 +30,12 @@ module.exports = [
     message: 'Method Not Allowed',
   },
   {
+    name: 'RequestTimeoutError',
+    alias: 'requestTimeoutError',
+    statusCode: 408,
+    message: 'Request Timeout',
+  },
+  {
     name: 'ConflictError',
     alias: 'conflictError',
     statusCode: 409,
@@ -48,9 +54,21 @@ module.exports = [
     message: 'Internal server error',
   },
   {
+    name: 'NotImplementedError',
+    alias: 'notImplementedError',
+    statusCode: 501,
+    message: 'Not Implemented',
+  },
+  {
     name: 'BadGatewayError',
     alias: 'badGatewayError',
     statusCode: 502,
     message: 'Bad Gateway',
+  },
+  {
+    name: 'ServiceUnavailableError',
+    alias: 'serviceUnavailableError',
+    statusCode: 503,
+    message: 'Service Unavailable',
   },
 ];
