@@ -1,11 +1,14 @@
 {
   "name": "http-errors-wrapper",
-  "version": "1.3.1",
+  "version": "2.0.0",
   "description": "Handle http errors in an easy way",
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "build": "./node_modules/.bin/babel src -d lib --no-copy-ignored"
+    "build": "./node_modules/.bin/babel src -d lib --no-copy-ignored",
+    "lint": "eslint .",
+    "prettier": "prettier \"**/*.{js,jsx,ts,tsx}\" --write",
+    "lint:prettier": "echo \"Prettier is running...\" && prettier \"**/*.{js,jsx,ts,tsx}\" --write && echo \"ESlint is running...\" && eslint ."
   },
   "repository": {
     "type": "git",
@@ -27,8 +30,16 @@
     "@babel/cli": "7.14.8",
     "@babel/core": "7.15.0",
     "@babel/preset-env": "7.15.0",
+    "babel-eslint": "10.1.0",
+    "eslint": "7.32.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-jsx-a11y": "6.4.1",
     "handlebars": "4.5.0",
     "jest": "23.6.0",
+    "prettier": "2.4.1",
     "sinon": "7.0.0"
+  },
+  "engines": {
+    "node": ">=10"
   }
 }

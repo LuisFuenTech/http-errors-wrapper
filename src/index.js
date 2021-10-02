@@ -1,10 +1,10 @@
-const helper = require("./utils");
-const errors = require("./errors.js");
+const helper = require('./utils');
+const errors = require('./errors.js');
 const httpErrors = {};
 
 const errorBuilder = (options) => {
   return class HttpError extends Error {
-    constructor(message = "") {
+    constructor(message = '') {
       super();
 
       /* istanbul ignore else */

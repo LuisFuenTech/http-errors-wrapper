@@ -1,2 +1,2 @@
-const httpErrors = require("./lib");
+const httpErrors = require('./src');
 module.exports = httpErrors;
